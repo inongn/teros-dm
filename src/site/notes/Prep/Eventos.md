@@ -1,0 +1,87 @@
+---
+{"dg-publish":true,"permalink":"/prep/eventos/","dgPassFrontmatter":true}
+---
+
+## Meletis
+- [ ] Test [[Diario/Lugares/Meletis\|Meletis]].
+- [ ] A classical comedy by [[Diario/Personas/Metodia\|Metodia]] is performed at the [[Diario/Lugares/Phenaxicon Theater\|Phenaxicon Theater]], depicting the great hero Haktos performed by [[Diario/Personas/Cois\|Cois]] battling Polukranos the Hydra.
+    - [ ] The play makes use of a new, remarkable, moving construct called the “Apo Mekhanes Theos” to represent the hydra.
+    - [ ] An [[Diario/Statblocks/Eidolon\|Eidolon]] lost spirit imbues the Mekhanes with life, and it kills [[Diario/Personas/Cois\|Cois]].
+    - [ ] The Mekhanes turns on the chorus, and the audience rises, unsure if this is part of the play. As the party rises to deal with the situation, [[Diario/Personas/Metodia\|Metodia]] yells at the party to make it seem like part of the show.
+    - [ ] After the dust settles, [[Diario/Personas/Bradeus\|Bradeus]] and [[Diario/Personas/Chadeus\|Chadeus]] approach the party. They were in the audience and, amazed at what the party accomplished, request their help finding [[Diario/Items/Corvus\|Corvus]], their raven construct, who flew off during the confrontation. [[Diario/Personas/Bradeus\|Bradeus]] and [[Diario/Personas/Chadeus\|Chadeus]] give the party a map of [[Diario/Lugares/Meletis\|Meletis]].
+- [ ] The [[Diario/Lugares/Temple of Waves\|Temple of Waves]] become full of tents selling underwater wares and the Thassa Temple erupts with events.
+    - [ ] [[Diario/Personas/Esteia\|Esteia]], An aquatic animal trainer has trained a trio of hippocamps and planned a race to showcase them to potential buyers.
+    - [ ] The buyers have arrived, but one of her jockeys didn’t show up, and she needs someone to race Bubbles, the hippocamp.
+- [ ] At the streets in front of the [[Diario/Lugares/Dekatia\|Dekatia]], [[Diario/Personas/Xenophiahas\|Xenophiahas]], a street philosopher, has gained a large and passionate following, and muses to his followers on the nature of life and morality.
+    - [ ] She has created a new teaching style he calls the Dialogue.
+    - [ ] Phoedetes, her student, offers 50 drachmae to adventurers who’ll engage in an entire Dialogue without resorting to violence.
+    - [ ] The philosopher welcomes them into the crowd with a smile, and engages them in the Dialogue with a simple question, “I see a weapon at your side. Do you enjoy using it to kill?”.
+    - [ ] She continues with questions like “Why do you say that?” or “Why do you think that’s true?” or “Why do you think I asked you that question?”
+    - [ ] Just as the dialogue concludes, a group of [[Diario/Statblocks/Warrior\|Warrior]] mercenaries arrive and tell the party to get out of the way so they can “teach this old man a lesson”. They’ve been hired by the [[Diario/Lugares/Dekatia\|Dekatia]] to rid of the philosopher.
+- [ ] The [[Diario/Lugares/Hall of the Twelve\|Hall of the Twelve]] is an active crime scene. [[Diario/Personas/Kleon\|Kleon]], the magistrate, is puzzled. The doors and windows are protected by wards that prevent anyone opening them from the outside at night.
+    - [ ] Although the [[Diario/Lugares/Hall of the Twelve\|Hall of the Twelve]] has several valuable works of art, the only thing missing is gold and a newly acquired statue.
+    - [ ] What’s more, the thief managed to break into the [[Diario/Lugares/Hall of the Twelve\|Hall of the Twelve]], but couldn’t or chose not to break into the mint that’s right next to it.
+    - [ ] The thieves are [[Diario/Personas/Chadeus\|Chadeus]] and [[Diario/Personas/Bradeus\|Bradeus]], who used a scroll of polymorph to pass one of them off as a statue.
+- [ ] At the [[Diario/Lugares/Shrine of Harvest\|Shrine of Harvest]], [[Diario/Personas/Lyros\|Lyros]] is [[Diario/Personas/Charis\|Charis]]’ prisoner.
+    - [ ] [[Diario/Personas/Lyros\|Lyros]] was marked for death and [[Diario/Personas/Charis\|Charis]], a lampad who was supposed to take his soul to the [[Diario/Lugares/Underworld\|Underworld]], chose to trap him in the Shrine.
+    - [ ] Charsis’ love has corrupted her nature, and she is fading. [[Diario/Personas/Lyros\|Lyros]], meanwhile, is losing his memory.
+    - [ ] After the party arrives, a shade sent by [[Diario/Personas/Erebos\|Erebos]] to punish [[Diario/Personas/Charis\|Charis]] arrives.
+    - [ ] At the [[Diario/Lugares/Grand Temple of the Sun\|Grand Temple of the Sun]], [[Diario/Personas/Brotana\|Brotana]] has perfected a ritual to reunite the [[Diario/Statblocks/Eidolon\|Eidolon]] and the [[Diario/Statblocks/Returned\|Returned]] of her deceased wife [[Diario/Personas/Lysara\|Lysara]].
+    - [ ] She asks the party to retrieve the [[Diario/Statblocks/Eidolon\|Eidolon]] and the [[Diario/Statblocks/Returned\|Returned]], who were seen at the beach and the graveyard, respectively.
+    - [ ] Before [[Diario/Personas/Lysara\|Lysara]] is completed, [[Diario/Personas/Erebos\|Erebos]] intervenes, and demands that, if they wish to take a soul from him, a party member must pledge to become the death god’s prisoner at his temple when they die.
+- [ ] At the [[Diario/Lugares/Agorrus Theater\|Agorrus Theater]], [[Diario/Personas/Maro\|Maro]], a playwright, has achieved success putting on comedy representations of classic myths.
+    - [ ] Her star actor, [[Diario/Personas/The Viper\|The Viper]], died in a botched stunt. He has now come back as a [[Diario/Statblocks/Returned\|Returned]], demanding to finish the performance.
+- [ ] At the [[Diario/Lugares/Temple of Knowledge\|Temple of Knowledge]], [[Diario/Personas/Lyros\|Lyros]] secretly prayed to Phenax for inspiration, but, since the trickster god has no temple in [[Diario/Lugares/Meletis\|Meletis]], [[Diario/Personas/The Bard\|The Bard]] made his offering in Ephara’s temple.
+    - [ ] The silver are the [[Diario/Personas/Gods\|Gods]] fighting over credit. [[Diario/Personas/Euneas\|Euneas]],
+    - [ ] [[Diario/Personas/Euneas\|Euneas]], Ephara’s priest, asks the party to mediate: should the creation belong to Ephara, Phenax, or to mortal ingenuity alone?
+- [ ] At the [[Diario/Lugares/Temple of Victory\|Temple of Victory]], [[Diario/Personas/Nestor\|Nestor]] awaits challengers.
+    - [ ] The competition consists of chariot racing, gladiatorial combat, and pentathlon.
+    - [ ] [[Diario/Personas/Cliros\|Cliros]] attempts to bribe the party to throw the fight so gamblers profit. The adventurers must choose whether to fight fair, rig the match, or find a clever third path.
+    - [ ] Before the match, a statue of Iroas in the arena cracks and bleeds. The omen unsettles the crowd.
+    - [ ] [[Diario/Personas/Nestor\|Nestor]] asks the party to interpret the sign: is it a blessing, a curse, or a warning? Their words may calm the audience—or spark a riot of fear in the middle of the games.
+- [ ] At the [[Diario/Lugares/Agora\|Agora]], [[Diario/Personas/Zagreus\|Zagreus]] cries out praying for the [[Diario/Personas/Gods\|Gods]] to send heroes to help him mend his broken heart.
+    - [ ] He declared his love to Delico, but he was rejected, and now his love does not even look at him when he visits.
+    - [ ] He wants to apologize, but knows Delico will only listen to whoever can best him in combat.
+    - [ ] He is at the [[Diario/Lugares/Temple of Victory\|Temple of Victory]], where he works, and can be recognized by his unmistakable golden mane.
+    - [ ] Delico is a [[Diario/Statblocks/Nyxborn Beast\|Nyxborn Beast]] lion.
+- [ ] At the [[Diario/Lugares/Reverent Bastion\|Reverent Bastion]], a crowd gathers as [[Diario/Personas/Liron\|Liron]] wanders arguing with himself.
+    - [ ] He recently received two visions from the [[Diario/Personas/Gods\|Gods]] regarding his son, who is stationed as a stration in an Akroan outpost in Phoberos. In both visions, the outpost is attacked by minotaurs from Skophos.
+    - [ ] In Heliod’s vision, his son dies, but his colleagues succesfully defend the outpost. In [[Diario/Personas/Erebos\|Erebos]]’ vision, his son lives, but everyone else dies.
+    - [ ] Whichever god [[Diario/Personas/Liron\|Liron]] pledges himself to will have their vision happen.
+    - [ ] When [[Diario/Personas/Liron\|Liron]] makes his choice, he is attacked by either a [[Shadow\|Shadow]] or a [[Griffon\|Griffon]], depending on which god he chose.
+- [ ] At the [[Diario/Lugares/Nyx Observatory\|Nyx Observatory]], restless spirits are after [[Diario/Personas/Callaphe\|Callaphe]]’s Starmap, the heart of the Observatory’s mechanism.
+- [ ] At the [[Diario/Lugares/Nyx Observatory\|Nyx Observatory]], [[Diario/Personas/Febea\|Febea]] prophesies the party will deal with the Dead Crisis by journeying into the [[Diario/Lugares/Underworld\|Underworld]] through [[Diario/Lugares/The Maw\|The Maw]], not before carrying out great Labors:
+    - [ ] Retrieve the seed of a plant never before seen in the mainland.
+    - [ ] Rekindle a [[Diario/Items/Shard of Light\|Shard of Light]] in a place of darkness.
+    - [ ] Trace [[Diario/Personas/Callaphe\|Callaphe]]'s steps towards a goodwilled community in need of aid.
+    - [ ] Find the heart of a godling.
+    - [ ] Steal the robe of Athreos. 
+# Abbey of Light
+- [ ] When the party rekindles the [[Diario/Items/Shard of Light\|Shard of Light]], the [[Diario/Statblocks/Returned\|Returned]] Fleet siege the [[Diario/Lugares/Abbey of Light\|Abbey of Light]]
+    - [ ] Each room in the [[Diario/Lugares/Abbey of Light\|Abbey of Light]] is swarmed by 1d4 [[Diario/Statblocks/Returned\|Returned]] mariners
+## Satyr Grove
+- [ ] [[Diario/Personas/Nastalia\|Nastalia]] announces her intention to host a Bakkaeia in the [[Diario/Lugares/Satyr Grove\|Satyr Grove]]
+    - [ ] Guests are crowned with lotus garlands. Each garland has a [[Diario/Items/Lotus Seed\|Lotus Seed]] attached to it.
+    - [ ] [[Diario/Personas/Atribus\|Atribus]] introduces himself as the character’s guide to the party and gives them a tour of the [[Diario/Lugares/Satyr Grove\|Satyr Grove]].
+- [ ] The [[Diario/Lugares/Satyr Grove\|Satyr Grove]] hosts games, each costing a seed.
+    - [ ] Wine of the [[Diario/Personas/Gods\|Gods]]: Compete in a table game where you throw your seed at the oponent’s wine cup to get them to drink
+    - [ ] Cup Dancing: your seed goes inside an upside down cup. The host shuffles it with two other cups. Guess correctly which has the seed.
+    - [ ] Petteia: strategy board game like checkers played with the seed
+    - [ ] Frenzy Dance: A wild dance contest while balancing the seed o a platter in the head
+    - [ ] Seed Throwing: throw a seed into a set of small clay amphora, aiming for the one in the middle.
+- [ ] The [[Diario/Lugares/Satyr Grove\|Satyr Grove]] hosts shows, each costing a seed.
+    - [ ] Fire Juggling
+    - [ ] Poetry Demonstration
+    - [ ] Bull-Leaping
+    - [ ] Masked Tragedy
+    - [ ] The Hornless Satyr
+- [ ] The [[Diario/Lugares/Satyr Grove\|Satyr Grove]] hosts a gift tent, each consting a seed.
+- [ ] The [[Diario/Lugares/Satyr Grove\|Satyr Grove]] hosts a fortune-telling tent where [[Diario/Personas/Nastalia\|Nastalia]] answers any question the party may have, each costing a seed.
+    - [ ] When the party enters the tent, they get an eeriee, chill feeling.
+    - [ ] When the party attempts to leave the tent, [[Diario/Personas/Nastalia\|Nastalia]] claims ownership of their souls.
+## Grung Village
+- [ ] The [[Diario/Personas/Grungs\|Grungs]] in the [[Diario/Lugares/Grung Village\|Grung Village]] mistake the party for [[Diario/Personas/Callaphe\|Callaphe]]
+    - [ ] [[Diario/Personas/Plopos\|Plopos]] asks the party deal with the [[Diario/Personas/Cyclopes\|Cyclopes]] in the [[Diario/Lugares/Resonant Cavern\|Resonant Cavern]] as [[Diario/Personas/Callaphe\|Callaphe]] once did
+## Dakra Isles
+- [ ] As the party explores the [[Diario/Lugares/Dakra Isles\|Dakra Isles]] and learns about the myth of [[Diario/Personas/Ainoe\|Ainoe]], the traces of the goddess in [[Diario/Items/Callaphe's Starmap\|Callaphe's Starmap]] absorb the memories until she manifests through [[Diario/Items/Corvus\|Corvus]].
+    - [ ] Once the party has visited all of the islands and restored the goddess, the [[Diario/Personas/Ainoe\|Ainoe]] Constellation reappears in the sky.
