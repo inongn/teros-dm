@@ -1,0 +1,6 @@
+.task-list-item  {
+    background-color: transparent !important;
+    box-shadow:none !important;
+    cursor:default !important;
+    transition: 0s !important;
+}
