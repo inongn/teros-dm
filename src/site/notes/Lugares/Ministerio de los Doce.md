@@ -1,0 +1,7 @@
+---
+{"location":"[[Meletis]]","patron":"","description":"","dg-publish-dm":true,"dg-publish":true,"type":"location","permalink":"/lugares/ministerio-de-los-doce/","dgPassFrontmatter":true}
+---
+
+<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
+<p dir="auto"><strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Meletis.md" data-href="Lugares/Meletis.md" href="Lugares/Meletis.md" class="internal-link" target="_blank" rel="noopener nofollow">Meletis</a></p>
+</div></div></span></p><h3><span>Personas</span></h3><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span>name</span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span><a data-tooltip-position="top" aria-label="Personas/Kleón.md" data-href="Personas/Kleón.md" href="Personas/Kleón.md" class="internal-link" target="_blank" rel="noopener nofollow">Kleón</a>: Magistrado Humano (él)</span></td></tr></tbody></table></div>

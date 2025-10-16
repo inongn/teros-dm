@@ -1,0 +1,8 @@
+---
+{"location":"[[Meletis]]","patron":"[[Érebos]]","description":"","dg-publish-dm":true,"dg-publish":true,"type":"location","permalink":"/lugares/necropolis/","dgPassFrontmatter":true}
+---
+
+<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
+<p dir="auto"><strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Érebos.md" data-href="Personas/Érebos.md" href="Personas/Érebos.md" class="internal-link" target="_blank" rel="noopener nofollow">Érebos</a><br>
+<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Meletis.md" data-href="Lugares/Meletis.md" href="Lugares/Meletis.md" class="internal-link" target="_blank" rel="noopener nofollow">Meletis</a></p>
+</div></div></span></p><h3><span>Personas</span></h3><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span>name</span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span><a data-tooltip-position="top" aria-label="Personas/Lisara.md" data-href="Personas/Lisara.md" href="Personas/Lisara.md" class="internal-link" target="_blank" rel="noopener nofollow">Lisara</a>: Page Retornada (élla)</span></td></tr></tbody></table></div>

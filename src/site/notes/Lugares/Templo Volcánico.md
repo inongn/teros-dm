@@ -1,0 +1,8 @@
+---
+{"location":"[[Efaistis]]","patron":"[[Pórforo]]","description":"","dg-publish-dm":true,"dg-publish":null,"type":"location","permalink":"/lugares/templo-volcanico/","dgPassFrontmatter":true}
+---
+
+<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
+<p dir="auto"><strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Pórforo.md" data-href="Personas/Pórforo.md" href="Personas/Pórforo.md" class="internal-link" target="_blank" rel="noopener nofollow">Pórforo</a><br>
+<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Efaistis.md" data-href="Lugares/Efaistis.md" href="Lugares/Efaistis.md" class="internal-link" target="_blank" rel="noopener nofollow">Efaistis</a></p>
+</div></div></span></p><h3><span>Items</span></h3><div><table class="dataview table-view-table"><thead class="table-view-thead"><tr class="table-view-tr-header"><th class="table-view-th"><span>name</span></th></tr></thead><tbody class="table-view-tbody"><tr><td><span><a data-tooltip-position="top" aria-label="Items/Corazón de la Primera Estrella.md" data-href="Items/Corazón de la Primera Estrella.md" href="Items/Corazón de la Primera Estrella.md" class="internal-link" target="_blank" rel="noopener nofollow">Corazón de la Primera Estrella</a></span></td></tr></tbody></table></div>
