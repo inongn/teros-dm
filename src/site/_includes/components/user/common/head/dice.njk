@@ -1,3 +1,44 @@
 <script>
-	console.log("hello")
+
+// Function to roll dice based on formula like "d20", "d8+1", "3d10-1"
+function roll(diceFormula, resultSpan) {
+  // Parse the formula
+  const regex = /^(\d*)d(\d+)([+-]\d+)?$/i;
+  const match = diceFormula.match(regex);
+  if (!match) {
+    console.error("Invalid dice formula:", diceFormula);
+    resultSpan.textContent = "Error";
+    return;
+  }
+
+  // Extract components
+  const numDice = match[1] ? parseInt(match[1], 10) : 1;
+  const numSides = parseInt(match[2], 10);
+  const modifier = match[3] ? parseInt(match[3], 10) : 0;
+
+  // Roll the dice
+  let total = 0;
+  for (let i = 0; i < numDice; i++) {
+    total += Math.floor(Math.random() * numSides) + 1;
+  }
+  total += modifier;
+
+  // Update the result
+  resultSpan.textContent = total;
+}
+
+// Scan the page for dice-roller spans and make them clickable
+document.addEventListener("DOMContentLoaded", () => {
+  const diceRollers = document.querySelectorAll(".dice-roller");
+  diceRollers.forEach(roller => {
+    roller.style.cursor = "pointer";
+    roller.addEventListener("click", () => {
+      const diceFormula = roller.getAttribute("data-dice");
+      const resultSpan = roller.querySelector(".dice-roller-result");
+      if (diceFormula && resultSpan) {
+        roll(diceFormula, resultSpan);
+      }
+    });
+  });
+});
 </script>
