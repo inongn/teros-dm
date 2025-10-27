@@ -1,13 +1,22 @@
 body {
-    /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
-   ***/
-    //  background-color: white;
-    //  .content {
-    //   font-size: 14px;
-    //  }
-    //  h1 {
-    //   color: black;
-    //  }
+.task-list-item  {
+    background-color: transparent !important;
+    box-shadow:none !important;
+    cursor:default !important;
+    transition: 0s !important;
+}
+
+  th {
+        display: none !important;
+    }
+
+    .markdown-preview-view ul > li.task-list-item.is-checked {
+  text-decoration:none;
+  color:var(--text-normal);
+}
+
+.markdown-preview-view ol > li.task-list-item.is-checked {
+  text-decoration:none;
+  color:var(--text-normal);
+}
 }
