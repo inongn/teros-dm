@@ -1,5 +1,5 @@
 ---
-{"cr":"3","ac":"17","hp":"58","traits":["**Multiataque.** Realiza dos ataques de Golpe.","**Parada.** +2 a la CA como reacción."],"actions":["**Golpe.** Tirada: `dice: d20+5`; Impacto: `dice: 2d6+3`."],"fue":"3","des":"1","con":"2","int":"0","sab":"0","car":"0","type":"Statblocks","dg-publish-dm":true,"permalink":"/statblocks/guerrero/","dgPassFrontmatter":true}
+{"dg-publish-dm":true,"permalink":"/statblocks/guerrero/"}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>AC:</strong> 17 | <strong>HP:</strong> 58 | <strong>CR:</strong> 3</div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>FUE:</strong> <span class="dice-roller" aria-label-position="top" data-dice="d20+3" aria-label="d20+3

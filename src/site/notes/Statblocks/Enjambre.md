@@ -1,5 +1,5 @@
 ---
-{"cr":"1","ac":"13","hp":"28","traits":["**Enjambre**. Puede ocupar el espacio de otra criatura."],"actions":["**Golpe.** Tirada: `dice: d20+4`; Impacto: `dice: 2d6+2`."],"fue":"1","des":"3","con":"-1","int":"-5","sab":"-2","car":"-4","type":"Statblocks","dg-publish-dm":true,"permalink":"/statblocks/enjambre/","dgPassFrontmatter":true}
+{"dg-publish-dm":true,"permalink":"/statblocks/enjambre/"}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>AC:</strong> 13 | <strong>HP:</strong> 28 | <strong>CR:</strong> 1</div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>FUE:</strong> <span class="dice-roller" aria-label-position="top" data-dice="d20+1" aria-label="d20+1

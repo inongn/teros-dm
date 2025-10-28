@@ -1,5 +1,5 @@
 ---
-{"cr":"1","ac":"15","hp":"22","traits":["**Tácticas de Manada.** Ventaja en las tiradas de ataque contra una criatura si un aliado está a menos de 5 pies."],"actions":["**Golpe.** Tirada: `dice: d20+5`; Impacto: `dice: d8+3`."],"fue":"3","des":"2","con":"1","int":"0","sab":"1","car":"0","type":"Statblocks","dg-publish-dm":true,"permalink":"/statblocks/retornado/","dgPassFrontmatter":true}
+{"dg-publish-dm":true,"permalink":"/statblocks/retornado/"}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>AC:</strong> 15 | <strong>HP:</strong> 22 | <strong>CR:</strong> 1</div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>FUE:</strong> <span class="dice-roller" aria-label-position="top" data-dice="d20+3" aria-label="d20+3

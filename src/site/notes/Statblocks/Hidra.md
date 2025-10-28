@@ -1,5 +1,5 @@
 ---
-{"cr":"6","ac":"15","hp":"130","traits":["**Múltiples Cabezas.** Tiene cinco cabezas. Siempre que recibe 25 de daño o más en un solo turno una cabeza muere.","**Multiataque.** Realiza tantos ataques de Mordisco como cabezas tenga.","**Resistencia Mágica.** Ventaja en las tiradas de salvación de hechizos."],"actions":["**Mordisco.** Tirada: `dice: d20+8`; Impacto: `dice: 1d10+5`."],"fue":"5","des":"1","con":"5","int":"-4","sab":"0","car":"-2","type":"Statblocks","dg-publish-dm":true,"permalink":"/statblocks/hidra/","dgPassFrontmatter":true}
+{"dg-publish-dm":true,"permalink":"/statblocks/hidra/"}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>AC:</strong> 15 | <strong>HP:</strong> 130 | <strong>CR:</strong> 6</div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner"><strong>FUE:</strong> <span class="dice-roller" aria-label-position="top" data-dice="d20+5" aria-label="d20+5
