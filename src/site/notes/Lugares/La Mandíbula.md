@@ -1,5 +1,5 @@
 ---
-{"location":"[[Islas Dakras]]","patron":"[[Ainoe]]","description":"","dg-publish-dm":true,"dg-publish":false,"type":"Lugares","permalink":"/lugares/la-mandibula/","dgPassFrontmatter":true}
+{"location":"[[Islas Dakras]]","patron":"[[Ainoe]]","description":"","dg-publish-dm":true,"dg-publish":false,"type":"Lugares","dg-path":"Islas Dakras/La Mandíbula.md","permalink":"/islas-dakras/la-mandibula/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">

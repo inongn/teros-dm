@@ -1,9 +1,9 @@
 ---
-{"location":"[[Palacio Erébico]]","role":"Sirviente","species":"Human","pronouns":"él","reference":"","description":"Human Sirviente (él)","statblock":"[[Plebeyo]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/el-escriba/","dgPassFrontmatter":true}
+{"location":"[[Inframundo]]","role":"Sirviente","species":"Human","pronouns":"él","reference":"","description":"Human Sirviente (él)","statblock":"[[Plebeyo]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/el-escriba/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
 <p dir="auto">Human Sirviente (él)<br>
-<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Palacio Erébico.md" data-href="Lugares/Palacio Erébico.md" href="Lugares/Palacio Erébico.md" class="internal-link" target="_blank" rel="noopener nofollow">Palacio Erébico</a><br>
+<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Inframundo.md" data-href="Lugares/Inframundo.md" href="Lugares/Inframundo.md" class="internal-link" target="_blank" rel="noopener nofollow">Inframundo</a><br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Plebeyo.md" data-href="Statblocks/Plebeyo.md" href="Statblocks/Plebeyo.md" class="internal-link" target="_blank" rel="noopener nofollow">Plebeyo</a></p>
 </div></div></span></p><h3><span>Áreas</span></h3><div><ul class="contains-task-list"><li data-task=" " class="dataview task-list-item"><input type="checkbox" class="dataview task-list-item-checkbox"><span><code>13.Salón de los Eruditos</code> Biblioteca con conocimiento incalculable sobre el cosmos con <a data-tooltip-position="top" aria-label="Personas/El Escriba" data-href="Personas/El Escriba" href="Personas/El Escriba" class="internal-link" target="_blank" rel="noopener nofollow">El Escriba</a>.</span></li></ul></div>

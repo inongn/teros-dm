@@ -1,9 +1,9 @@
 ---
-{"dg-home":true,"dg-publish":true,"dg-publish-dm":true,"permalink":"/texto/diario/","tags":["gardenEntry"],"dgPassFrontmatter":true}
+{"dg-home":true,"dg-publish":true,"dg-publish-dm":true,"dg-path":"Diario.md","permalink":"/diario/","tags":["gardenEntry"],"dgPassFrontmatter":true}
 ---
 
 ## Sesión 01
-- [x] El grupo comenzó en [[Lugares/Meletis\|Meletis]], presenciando una obra en el [[Lugares/Teatro Fenaksicón\|Teatro Fenaksicón]]. Bajo dirección de la dramaturga [[Personas/Metodia\|Metodia]], el actor [[Personas/Cois\|Cois]] interpretaba al héroe Haktos en su batalla contra la [[Statblocks/Hidra\|Hidra]], "interpretada" por un constructo llamado "mekhanes". Cuando el mekhanes cobró vida propia, atacó a [[Personas/Cois\|Cois]], y se dirigió hacia el coro, las Hermanas se levantaron de sus asientos para lidiar con la situación.
+- [x] El grupo comenzó en [[Lugares/Meletis\|Meletis]], presenciando una obra en el [[Lugares/Teatro Fenaksicón\|Teatro Fenaksicón]]. Bajo dirección de la dramaturga [[Personas/Metodia\|Metodia]], el actor [[Personas/Cois\|Cois]] interpretaba al héroe Haktos en su batalla contra la hidra, "interpretada" por un constructo llamado "mekhanes". Cuando el mekhanes cobró vida propia, atacó a [[Personas/Cois\|Cois]], y se dirigió hacia el coro, las Hermanas se levantaron de sus asientos para lidiar con la situación.
 - [x] Dos jóvenes, [[Personas/Chadeus\|Chadeus]] y [[Personas/Bradeus\|Bradeus]], se acercaron a las hermanas pidiendo ayuda para encontrar a [[Items/Corvus\|Corvus]], su constructo de navegación marítima. También mencionaron que [[Personas/Chadeus\|Chadeus]] es sobrino de [[Personas/Cliros\|Cliros]], quien es dueño de la flota pesquera maś grande de la polis.
 - [x] Las hermanas pasaron por el [[Lugares/Ágora\|Ágora]], donde vieron a [[Personas/Zagreo\|Zagreo]] rogando a los dioses que manden héroes capaces de arreglar su corazón roto. [[Personas/Zagreo\|Zagreo]] se le había declarado a su amor, Delico, pero éste lo ignoró, y necesitaba quien se disculpe por él.
 - [x] Las hermanas se dirigieron al [[Lugares/Gran Estadio\|Gran Estadio]] en búsqueda de Delico, donde se enteraron que era un león gladiatorial. Convencieron a [[Personas/Zagreo\|Zagreo]] que lo mejor sería dejarlo libre.
