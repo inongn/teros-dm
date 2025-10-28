@@ -1,9 +1,9 @@
 ---
-{"location":"[[Santuario de la Cosecha]]","role":"Ninfa","species":"Lámpade","pronouns":"élla","reference":"","description":"Lámpade Ninfa (élla)","statblock":"[[Ninfa]]","patron":"[[Érebos]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/charis/","dgPassFrontmatter":true}
+{"location":"[[Santuario de la Cosecha]]","role":"Ninfa","species":"Lámpade","pronouns":"élla","reference":"","image":"","description":"Lámpade Ninfa (élla)","statblock":"[[Ninfa]]","patron":"[[Érebos]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/charis/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
-<p dir="auto">Lámpade Ninfa (élla)<br>
+<p dir="auto"> Lámpade Ninfa (élla)<br>
 <strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Érebos.md" data-href="Personas/Érebos.md" href="Personas/Érebos.md" class="internal-link" target="_blank" rel="noopener nofollow">Érebos</a><br>
 <strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Santuario de la Cosecha.md" data-href="Lugares/Santuario de la Cosecha.md" href="Lugares/Santuario de la Cosecha.md" class="internal-link" target="_blank" rel="noopener nofollow">Santuario de la Cosecha</a><br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Ninfa.md" data-href="Statblocks/Ninfa.md" href="Statblocks/Ninfa.md" class="internal-link" target="_blank" rel="noopener nofollow">Ninfa</a></p>

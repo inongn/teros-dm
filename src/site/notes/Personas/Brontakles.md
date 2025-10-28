@@ -1,9 +1,9 @@
 ---
-{"location":"[[Anurafanos]]","role":"Jefe","species":"Cíclope","pronouns":"él","reference":"Kuzco (The Emperor's New Groove)","description":"Cíclope Jefe (él)","statblock":"[[Guerrero]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/brontakles/","dgPassFrontmatter":true}
+{"location":"[[Anurafanos]]","role":"Jefe","species":"Cíclope","pronouns":"él","reference":"Kuzco (The Emperor's New Groove)","image":"","description":"Cíclope Jefe (él)","statblock":"[[Guerrero]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/brontakles/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
-<p dir="auto">Cíclope Jefe (él)<br>
+<p dir="auto"> Cíclope Jefe (él)<br>
 <strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Anurafanos.md" data-href="Lugares/Anurafanos.md" href="Lugares/Anurafanos.md" class="internal-link" target="_blank" rel="noopener nofollow">Anurafanos</a><br>
 <strong>Referencia:</strong> Kuzco (The Emperor's New Groove)<br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Guerrero.md" data-href="Statblocks/Guerrero.md" href="Statblocks/Guerrero.md" class="internal-link" target="_blank" rel="noopener nofollow">Guerrero</a></p>

@@ -1,9 +1,9 @@
 ---
-{"location":"[[Anurafanos]]","role":"Sacerdotiza","species":"Cíclope","pronouns":"élla","reference":"Izma (The Emperor's New Groove)","description":"Cíclope Sacerdotiza (élla)","statblock":"[[Mago]]","patron":"[[Talasa]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/eurifa/","dgPassFrontmatter":true}
+{"location":"[[Anurafanos]]","role":"Sacerdotiza","species":"Cíclope","pronouns":"élla","reference":"Izma (The Emperor's New Groove)","image":"","description":"Cíclope Sacerdotiza (élla)","statblock":"[[Mago]]","patron":"[[Talasa]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/eurifa/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
-<p dir="auto">Cíclope Sacerdotiza (élla)<br>
+<p dir="auto"> Cíclope Sacerdotiza (élla)<br>
 <strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Talasa.md" data-href="Personas/Talasa.md" href="Personas/Talasa.md" class="internal-link" target="_blank" rel="noopener nofollow">Talasa</a><br>
 <strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Anurafanos.md" data-href="Lugares/Anurafanos.md" href="Lugares/Anurafanos.md" class="internal-link" target="_blank" rel="noopener nofollow">Anurafanos</a><br>
 <strong>Referencia:</strong> Izma (The Emperor's New Groove)<br>

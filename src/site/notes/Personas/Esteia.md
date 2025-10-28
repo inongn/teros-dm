@@ -1,9 +1,9 @@
 ---
-{"location":"[[Templo de las Olas]]","role":"Entrenadora","species":"Tritona","pronouns":"élla","reference":"","description":"Tritona Entrenadora (élla)","statblock":"[[Plebeyo]]","patron":"[[Talasa]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/esteia/","dgPassFrontmatter":true}
+{"location":"[[Templo de las Olas]]","role":"Entrenadora","species":"Tritona","pronouns":"élla","reference":"","image":"","description":"Tritona Entrenadora (élla)","statblock":"[[Plebeyo]]","patron":"[[Talasa]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/esteia/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
-<p dir="auto">Tritona Entrenadora (élla)<br>
+<p dir="auto"> Tritona Entrenadora (élla)<br>
 <strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Talasa.md" data-href="Personas/Talasa.md" href="Personas/Talasa.md" class="internal-link" target="_blank" rel="noopener nofollow">Talasa</a><br>
 <strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Templo de las Olas.md" data-href="Lugares/Templo de las Olas.md" href="Lugares/Templo de las Olas.md" class="internal-link" target="_blank" rel="noopener nofollow">Templo de las Olas</a><br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Plebeyo.md" data-href="Statblocks/Plebeyo.md" href="Statblocks/Plebeyo.md" class="internal-link" target="_blank" rel="noopener nofollow">Plebeyo</a></p>

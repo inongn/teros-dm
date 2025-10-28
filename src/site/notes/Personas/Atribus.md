@@ -1,9 +1,9 @@
 ---
-{"location":"[[Eskatos]]","role":"Juerguista","species":"Sátiro","pronouns":"él","reference":"","description":"Sátiro Juerguista (él)","statblock":"[[Plebeyo]]","patron":"[[Cénagos]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/atribus/","dgPassFrontmatter":true}
+{"location":"[[Eskatos]]","role":"Juerguista","species":"Sátiro","pronouns":"él","reference":"","image":"","description":"Sátiro Juerguista (él)","statblock":"[[Plebeyo]]","patron":"[[Cénagos]]","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/atribus/","dgPassFrontmatter":true}
 ---
 
 <p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
-<p dir="auto">Sátiro Juerguista (él)<br>
+<p dir="auto"> Sátiro Juerguista (él)<br>
 <strong>Deidad:</strong> <a data-tooltip-position="top" aria-label="Personas/Cénagos.md" data-href="Personas/Cénagos.md" href="Personas/Cénagos.md" class="internal-link" target="_blank" rel="noopener nofollow">Cénagos</a><br>
 <strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Eskatos.md" data-href="Lugares/Eskatos.md" href="Lugares/Eskatos.md" class="internal-link" target="_blank" rel="noopener nofollow">Eskatos</a><br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Plebeyo.md" data-href="Statblocks/Plebeyo.md" href="Statblocks/Plebeyo.md" class="internal-link" target="_blank" rel="noopener nofollow">Plebeyo</a></p>
