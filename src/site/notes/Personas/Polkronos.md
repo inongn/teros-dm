@@ -1,8 +1,10 @@
 ---
-{"location":"[[Caverna Resonante]]","role":"Pastor","species":"Cíclope","pronouns":"él","reference":"","description":"Pastor Cíclope (él)","statblock":"[[Guerrero]]","type":"person","dg-publish":null,"dg-publish-dm":true,"permalink":"/personas/polkronos/","dgPassFrontmatter":true}
+{"location":"[[Caverna Resonante]]","role":"Pastor","species":"Cíclope","pronouns":"él","reference":"Kronk (The Emperor's New Groove)","description":"Cíclope Pastor (él)","statblock":"[[Guerrero]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/polkronos/","dgPassFrontmatter":true}
 ---
 
-<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Pastor Cíclope (él)</div></div><div class="callout-content">
-<p dir="auto"><strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Caverna Resonante.md" data-href="Lugares/Caverna Resonante.md" href="Lugares/Caverna Resonante.md" class="internal-link" target="_blank" rel="noopener nofollow">Caverna Resonante</a><br>
+<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
+<p dir="auto">Cíclope Pastor (él)<br>
+<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Caverna Resonante.md" data-href="Lugares/Caverna Resonante.md" href="Lugares/Caverna Resonante.md" class="internal-link" target="_blank" rel="noopener nofollow">Caverna Resonante</a><br>
+<strong>Referencia:</strong> Kronk (The Emperor's New Groove)<br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Guerrero.md" data-href="Statblocks/Guerrero.md" href="Statblocks/Guerrero.md" class="internal-link" target="_blank" rel="noopener nofollow">Guerrero</a></p>
-</div></div></span></p>
+</div></div></span></p><h3><span>Áreas</span></h3><div><ul class="contains-task-list"><li data-task=" " class="dataview task-list-item"><input type="checkbox" class="dataview task-list-item-checkbox"><span><code>10.Establo de Bestias</code> <a data-tooltip-position="top" aria-label="Personas/Polkronos" data-href="Personas/Polkronos" href="Personas/Polkronos" class="internal-link" target="_blank" rel="noopener nofollow">Polkronos</a> con un Basilisco (<a data-tooltip-position="top" aria-label="Statblocks/Bestia Nikseana" data-href="Statblocks/Bestia Nikseana" href="Statblocks/Bestia Nikseana" class="internal-link" target="_blank" rel="noopener nofollow">Bestia Nikseana</a>).</span></li></ul></div>

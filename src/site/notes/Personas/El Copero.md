@@ -1,8 +1,9 @@
 ---
-{"location":"[[Palacio Erébico]]","role":"Sirviente","species":"Humano","pronouns":"él","reference":"","description":"Sirviente Humano (él)","statblock":"[[Plebeyo]]","type":"person","dg-publish":null,"dg-publish-dm":true,"permalink":"/personas/el-copero/","dgPassFrontmatter":true}
+{"location":"[[Palacio Erébico]]","role":"Sirviente","species":"Humano","pronouns":"él","reference":"","description":"Humano Sirviente (él)","statblock":"[[Plebeyo]]","patron":"","type":"Personas","dg-publish":false,"dg-publish-dm":true,"permalink":"/personas/el-copero/","dgPassFrontmatter":true}
 ---
 
-<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Sirviente Humano (él)</div></div><div class="callout-content">
-<p dir="auto"><strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Palacio Erébico.md" data-href="Lugares/Palacio Erébico.md" href="Lugares/Palacio Erébico.md" class="internal-link" target="_blank" rel="noopener nofollow">Palacio Erébico</a><br>
+<p><span><div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Info</div></div><div class="callout-content">
+<p dir="auto">Humano Sirviente (él)<br>
+<strong>Locación:</strong> <a data-tooltip-position="top" aria-label="Lugares/Palacio Erébico.md" data-href="Lugares/Palacio Erébico.md" href="Lugares/Palacio Erébico.md" class="internal-link" target="_blank" rel="noopener nofollow">Palacio Erébico</a><br>
 <strong>Statblock:</strong> <a data-tooltip-position="top" aria-label="Statblocks/Plebeyo.md" data-href="Statblocks/Plebeyo.md" href="Statblocks/Plebeyo.md" class="internal-link" target="_blank" rel="noopener nofollow">Plebeyo</a></p>
-</div></div></span></p>
+</div></div></span></p><h3><span>Áreas</span></h3><div><ul class="contains-task-list"><li data-task=" " class="dataview task-list-item"><input type="checkbox" class="dataview task-list-item-checkbox"><span><code>3.Corte</code> Trono frente a un óvalo de obsidiana en el suelo y <a data-tooltip-position="top" aria-label="Personas/El Copero" data-href="Personas/El Copero" href="Personas/El Copero" class="internal-link" target="_blank" rel="noopener nofollow">El Copero</a>.</span></li></ul></div>
