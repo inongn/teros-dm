@@ -1,0 +1,87 @@
+// === Dice Roller Script ===
+(function() {
+  // Regex: captures dice notation like "4d6-2", "d8", "+3", etc.
+  const diceRegex = /\b(?:\d*d\d+(?:[+-]\d+)?|[+-]\d+)\b/g;
+
+  function replaceDiceNotations(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    for (const node of textNodes) {
+      const text = node.textContent;
+      if (diceRegex.test(text)) {
+        const frag = document.createDocumentFragment();
+        let lastIndex = 0;
+        text.replace(diceRegex, (match, index) => {
+          frag.append(text.slice(lastIndex, index));
+          const span = document.createElement('span');
+          span.className = 'dice-roller';
+          span.textContent = match;
+          span.style.cursor = 'pointer';
+          span.style.color = '#0074d9';
+          span.style.textDecoration = 'underline';
+          span.addEventListener('click', () => rollDice(match, span));
+          frag.append(span);
+          lastIndex = index + match.length;
+        });
+        frag.append(text.slice(lastIndex));
+        node.parentNode.replaceChild(frag, node);
+      }
+    }
+  }
+
+  function rollDice(formula, element) {
+    const parsed = parseDiceFormula(formula);
+    const rolls = [];
+    for (let i = 0; i < parsed.count; i++) {
+      rolls.push(1 + Math.floor(Math.random() * parsed.sides));
+    }
+    const total = rolls.reduce((a, b) => a + b, 0) + parsed.modifier;
+    showPopup(`${formula} → ${rolls.join(' + ')} ${parsed.modifier ? (parsed.modifier > 0 ? '+' : '') + parsed.modifier : ''} = ${total}`);
+  }
+
+  function parseDiceFormula(str) {
+    let count = 1, sides = 20, modifier = 0;
+
+    const match = str.match(/^(\d*)d(\d+)([+-]\d+)?$/);
+    if (match) {
+      count = match[1] ? parseInt(match[1], 10) : 1;
+      sides = parseInt(match[2], 10);
+      modifier = match[3] ? parseInt(match[3], 10) : 0;
+    } else if (/^[+-]?\d+$/.test(str)) {
+      // No dice given: treat as d20 with modifier
+      count = 1;
+      sides = 20;
+      modifier = parseInt(str, 10);
+    }
+    return { count, sides, modifier };
+  }
+
+  function showPopup(message) {
+    const popup = document.createElement('div');
+    popup.textContent = message;
+    popup.style.position = 'fixed';
+    popup.style.bottom = '20px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.background = 'rgba(0,0,0,0.8)';
+    popup.style.color = '#fff';
+    popup.style.padding = '10px 20px';
+    popup.style.borderRadius = '8px';
+    popup.style.fontSize = '16px';
+    popup.style.zIndex = '9999';
+    popup.style.transition = 'opacity 0.3s';
+    document.body.appendChild(popup);
+
+    setTimeout(() => { popup.style.opacity = '0'; }, 1700);
+    setTimeout(() => popup.remove(), 2000);
+  }
+
+  // Run once after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => replaceDiceNotations(document.body));
+  } else {
+    replaceDiceNotations(document.body);
+  }
+})();
