@@ -20,11 +20,12 @@ body {
   color:var(--text-normal);
 }
 
-    span.dice-roller-result {
+    .dice-roller-result {
     font-weight: bold;
     font-family: monospace;
     color: #3d2a72;
-    BACKGROUND-COLOR: #ece6f6;
+    background-color: #ece6f6;
     padding: 2px 4px;
     border-radius: 10px;
+}
 }
