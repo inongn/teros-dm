@@ -1,179 +1,149 @@
-        (function() {
-            // Define the regular expression to find dice notation: (N)d(S)(+\/-(M))
-            // Group 1: (\d*) -> Dice Count (N, optional, e.g., '3' in '3d6')
-            // Group 2: (\d+) -> Sides (S, mandatory, e.g., '6' in '3d6')
-            // Group 3: ([\+\-]\d+)? -> Modifier (M, optional, e.g., '+2' or '-1')
-            const diceRegex = /(\d*)[dD](\d+)([\+\-]\d+)?/g;
+(function () {
+  // Matches:
+  //  - "4d6", "2d10+3", "d8-1"
+  //  - "+3", "-1"  (modifier-only; treated as "1d20+3"/"1d20-1")
+  const DICE_RE = /\b(?:\d*d\d+(?:[+-]\d+)?|[+-]\d+)\b/gi;
 
-            // --- Utility Functions ---
+  // Max dice and max sides to avoid obvious abuse
+  const MAX_DICE = 100;
+  const MAX_SIDES = 1000;
 
-            /**
-             * Parses a dice notation string and calculates the roll result.
-             * @param {string} notation - The dice notation string (e.g., "2d6+3").
-             * @returns {{formula: string, result: number}} The detailed result.
-             */
-            function rollDice(notation) {
-                // Reset regex execution index
-                diceRegex.lastIndex = 0;
-                const match = diceRegex.exec(notation);
+  // Walk text nodes and replace matches with clickable spans
+  function replaceDiceNotations(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
 
-                if (!match) {
-                    return { formula: "Error: Invalid Notation", result: 0 };
-                }
+    for (const node of nodes) {
+      const text = node.nodeValue;
+      // quick skip (reset lastIndex just in case)
+      DICE_RE.lastIndex = 0;
+      if (!DICE_RE.test(text)) continue;
 
-                // Extract components
-                let diceCount = parseInt(match[1]) || 1; // Default to 1 if count is not specified (e.g., 'd20')
-                const sides = parseInt(match[2]);
-                const modifierStr = match[3] || '';
-                const modifier = parseInt(modifierStr) || 0;
+      // Build a fragment with spans
+      const frag = document.createDocumentFragment();
+      let lastIndex = 0;
+      DICE_RE.lastIndex = 0;
+      let m;
+      while ((m = DICE_RE.exec(text)) !== null) {
+        const match = m[0];
+        const index = m.index;
+        // Append text before match
+        if (index > lastIndex) frag.appendChild(document.createTextNode(text.slice(lastIndex, index)));
+        // Create span
+        const span = document.createElement('span');
+        span.className = 'dice-roller';
+        span.textContent = match;
+        span.style.cursor = 'pointer';
+        // Optional visual - you can remove or style via CSS instead
+        span.style.textDecoration = 'underline';
+        span.style.userSelect = 'none';
+        span.addEventListener('click', () => handleClick(match, span));
+        frag.appendChild(span);
+        lastIndex = index + match.length;
+      }
+      // Append remaining text
+      if (lastIndex < text.length) frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+      node.parentNode.replaceChild(frag, node);
+    }
+  }
 
-                let totalRoll = 0;
-                let rollDetails = [];
+  // Parse a formula like "4d6+2", "d8", "+3", "-1" -> {count, sides, modifier}
+  function parseDiceFormula(str) {
+    const s = str.trim();
+    // dice form: (\d*)d(\d+)([+-]\d+)?
+    const diceMatch = s.match(/^(\d*)d(\d+)([+-]\d+)?$/i);
+    if (diceMatch) {
+      let count = diceMatch[1] ? parseInt(diceMatch[1], 10) : 1;
+      let sides = parseInt(diceMatch[2], 10);
+      let modifier = diceMatch[3] ? parseInt(diceMatch[3], 10) : 0;
 
-                // Perform the rolls
-                for (let i = 0; i < diceCount; i++) {
-                    // Roll is inclusive: Math.floor(Math.random() * max) + 1
-                    const roll = Math.floor(Math.random() * sides) + 1;
-                    totalRoll += roll;
-                    rollDetails.push(roll);
-                }
+      // Clamp / validate
+      if (isNaN(count) || count < 1) count = 1;
+      if (isNaN(sides) || sides < 1) sides = 20;
+      if (count > MAX_DICE) count = MAX_DICE;
+      if (sides > MAX_SIDES) sides = MAX_SIDES;
 
-                // Calculate final result
-                const finalResult = totalRoll + modifier;
+      return { count, sides, modifier, raw: s };
+    }
 
-                // Construct a descriptive formula string
-                let formula = notation + " = ";
-                if (rollDetails.length > 1) {
-                    formula += "(" + rollDetails.join(' + ') + ")";
-                } else if (rollDetails.length === 1) {
-                    formula += rollDetails[0];
-                }
+    // modifier-only like "+3" or "-1" -> treated as 1d20+mod
+    const modMatch = s.match(/^([+-]\d+)$/);
+    if (modMatch) {
+      const modifier = parseInt(modMatch[1], 10);
+      return { count: 1, sides: 20, modifier, raw: s };
+    }
 
-                if (modifier !== 0) {
-                    formula += (modifier > 0 ? " + " : " - ") + Math.abs(modifier);
-                }
-                formula += " = " + finalResult;
+    return null;
+  }
 
-                return { formula, result: finalResult };
-            }
+  // Roll dice according to parsed formula
+  function rollDice(parsed) {
+    const rolls = [];
+    for (let i = 0; i < parsed.count; i++) {
+      // uniform integer 1..sides
+      rolls.push(1 + Math.floor(Math.random() * parsed.sides));
+    }
+    const sum = rolls.reduce((a, b) => a + b, 0);
+    const total = sum + parsed.modifier;
+    return { rolls, sum, total };
+  }
 
-            /**
-             * Displays a transient toast notification with the roll result.
-             * @param {string} notation - The original dice notation.
-             * @param {string} formula - The detailed formula string.
-             * @param {number} result - The final numerical result.
-             */
-            function showToast(notation, formula, result) {
-                const container = document.getElementById('toast-container');
-                const toast = document.createElement('div');
-                toast.className = 'toast-message bg-white text-gray-800 border-l-4 border-primary';
+  // Show popup at bottom center, auto-hide after 2s
+  function showPopup(text) {
+    const popup = document.createElement('div');
+    popup.className = 'dice-popup';
+    popup.textContent = text;
+    // Basic inline styles (you can move these to CSS)
+    popup.style.position = 'fixed';
+    popup.style.left = '50%';
+    popup.style.bottom = '20px';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.background = 'rgba(0,0,0,0.85)';
+    popup.style.color = '#fff';
+    popup.style.padding = '8px 14px';
+    popup.style.borderRadius = '8px';
+    popup.style.zIndex = 999999;
+    popup.style.fontFamily = 'system-ui, sans-serif';
+    popup.style.fontSize = '14px';
+    popup.style.boxShadow = '0 6px 18px rgba(0,0,0,0.3)';
+    popup.style.opacity = '1';
+    popup.style.transition = 'opacity 0.2s ease';
 
-                toast.innerHTML = `
-                    <p class="font-bold text-lg mb-1">${notation} Roll</p>
-                    <p class="text-2xl font-extrabold text-primary mb-1">${result}</p>
-                    <p class="text-sm text-gray-600">${formula}</p>
-                `;
+    document.body.appendChild(popup);
 
-                // Add to container
-                container.appendChild(toast);
+    // fade then remove
+    setTimeout(() => (popup.style.opacity = '0'), 1700);
+    setTimeout(() => popup.remove(), 2000);
+  }
 
-                // Wait a moment for the reflow before starting the transition
-                setTimeout(() => {
-                    toast.classList.add('show');
-                }, 10);
+  // Click handler: parse, roll, show popup with breakdown
+  function handleClick(text, element) {
+    const parsed = parseDiceFormula(text);
+    if (!parsed) {
+      showPopup(`${text} — invalid formula`);
+      return;
+    }
+    const result = rollDice(parsed);
 
-                // Auto-hide after 5 seconds
-                const duration = 5000;
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                    // Remove from DOM after transition finishes (0.5s)
-                    setTimeout(() => {
-                        container.removeChild(toast);
-                    }, 500);
-                }, duration);
-            }
+    // Build readable breakdown:
+    // - if multiple rolls: "4d6+2 → 3 + 5 + 2 + 6 + 2 = 18"
+    // - if single d20 with modifier only: "+3 -> d20+3 → 17 + 3 = 20"
+    const formulaDisplay = (parsed.raw.match(/^([+-]\d+)$/) ? `d20${parsed.modifier >= 0 ? '+' : ''}${parsed.modifier}` : parsed.raw);
+    const rollsStr = result.rolls.join(' + ');
+    const modStr = parsed.modifier ? ` ${parsed.modifier >= 0 ? '+' : '-'} ${Math.abs(parsed.modifier)}` : '';
+    const totalStr = `${result.total}`;
 
-            // --- DOM Manipulation and Setup ---
+    const message = `${formulaDisplay} → ${rollsStr}${parsed.modifier ? ` ${parsed.modifier >= 0 ? '+' : '-'} ${Math.abs(parsed.modifier)}` : ''} = ${totalStr}`;
+    showPopup(message);
+  }
 
-            /**
-             * Attaches the click listener to all .dice-roller elements.
-             */
-            function initEventListeners() {
-                document.querySelectorAll('.dice-roller').forEach(span => {
-                    span.addEventListener('click', (event) => {
-                        // Prevent click from propagating up to parent elements
-                        event.stopPropagation();
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => replaceDiceNotations(document.body));
+  } else {
+    replaceDiceNotations(document.body);
+  }
 
-                        const notation = span.textContent.trim();
-                        const roll = rollDice(notation);
-
-                        showToast(notation, roll.formula, roll.result);
-                    });
-                });
-            }
-
-            /**
-             * Traverses the body and wraps all found dice notations in a clickable span.
-             */
-            function wrapDiceNotation() {
-                // Use a TreeWalker to efficiently find all non-empty text nodes
-                const walker = document.createTreeWalker(
-                    document.body,
-                    NodeFilter.SHOW_TEXT,
-                    // Filter function to skip script and style tags, and already wrapped text
-                    { acceptNode: (node) => {
-                        const parentTag = node.parentNode.tagName;
-                        if (parentTag === 'SCRIPT' || parentTag === 'STYLE' || node.parentNode.classList.contains('dice-roller')) {
-                            return NodeFilter.FILTER_REJECT;
-                        }
-                        // Only accept non-empty text nodes that contain dice notation
-                        if (node.nodeValue.trim() !== '' && diceRegex.test(node.nodeValue)) {
-                            return NodeFilter.FILTER_ACCEPT;
-                        }
-                        return NodeFilter.FILTER_REJECT;
-                    }},
-                    false
-                );
-
-                const textNodesToReplace = [];
-                let currentNode;
-                while (currentNode = walker.nextNode()) {
-                    textNodesToReplace.push(currentNode);
-                }
-
-                textNodesToReplace.forEach(textNode => {
-                    const originalText = textNode.nodeValue;
-
-                    // Use replace to find and wrap the dice notation
-                    const newHtml = originalText.replace(diceRegex, (match) => {
-                        // We replace the matched text with a span wrapper
-                        return `<span class="dice-roller">${match}</span>`;
-                    });
-
-                    // Create a temporary container element to hold the new DOM structure
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = newHtml;
-
-                    // Replace the original text node with the content of the temporary container
-                    textNode.parentNode.insertBefore(tempDiv, textNode);
-
-                    // Move all children of the tempDiv (the text and spans) into the parent
-                    while (tempDiv.firstChild) {
-                        textNode.parentNode.insertBefore(tempDiv.firstChild, tempDiv);
-                    }
-
-                    // Remove the temporary container and the original text node
-                    textNode.parentNode.removeChild(tempDiv);
-                    textNode.parentNode.removeChild(textNode);
-                });
-            }
-
-            // --- Initialization ---
-
-            document.addEventListener('DOMContentLoaded', () => {
-                // 1. Wrap the notation in spans
-                wrapDiceNotation();
-                // 2. Attach click handlers to the new spans
-                initEventListeners();
-            });
-        })();
+  // Optional: if new content is added dynamically, you can call replaceDiceNotations(document.body) again.
+})();
