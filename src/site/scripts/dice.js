@@ -1,178 +1,179 @@
-        document.addEventListener('DOMContentLoaded', () => {
-            const TOAST_DURATION_MS = 2000;
-            const toastContainer = document.getElementById('toast-container');
+(function() {
+    // Define the regular expression to find dice notation: (N)d(S)(+\/-(M))
+    // Group 1: (\d*) -> Dice Count (N, optional, e.g., '3' in '3d6')
+    // Group 2: (\d+) -> Sides (S, mandatory, e.g., '6' in '3d6')
+    // Group 3: ([\+\-]\d+)? -> Modifier (M, optional, e.g., '+2' or '-1')
+    const diceRegex = /(\d*)[dD](\d+)([\+\-]\d+)?/g;
 
-            /**
-             * Handles the actual dice rolling logic.
-             * @param {string} formula - The raw dice notation (e.g., "4d6+2", "+3", "d20").
-             * @returns {{formula: string, result: number|string, details: string}} The roll result object.
-             */
-            function rollDice(formula) {
-                // Remove spaces and normalize 'D' to 'd'
-                formula = formula.trim().toLowerCase().replace(/\s/g, '');
+    // --- Utility Functions ---
 
-                // Regular expression to capture dice rolls: XdY[+|-Z]
-                let match = formula.match(/(\d*)d(\d+)([+-]\d+)?/);
+    /**
+     * Parses a dice notation string and calculates the roll result.
+     * @param {string} notation - The dice notation string (e.g., "2d6+3").
+     * @returns {{formula: string, result: number}} The detailed result.
+     */
+    function rollDice(notation) {
+        // Reset regex execution index
+        diceRegex.lastIndex = 0;
+        const match = diceRegex.exec(notation);
 
-                if (match) {
-                    // Case 1: XdY is present (e.g., '4d6', 'd20', '2d8+3')
-                    const numDice = parseInt(match[1] || '1'); // 'd6' means 1d6
-                    const dieSize = parseInt(match[2]);
-                    const modifier = parseInt(match[3] || '0');
+        if (!match) {
+            return { formula: "Error: Invalid Notation", result: 0 };
+        }
 
-                    if (dieSize <= 1) {
-                         return { formula, result: 'Error', details: 'Dice size must be > 1.' };
-                    }
-                    if (numDice > 100) {
-                         return { formula, result: 'Error', details: 'Max 100 dice allowed.' };
-                    }
+        // Extract components
+        let diceCount = parseInt(match[1]) || 1; // Default to 1 if count is not specified (e.g., 'd20')
+        const sides = parseInt(match[2]);
+        const modifierStr = match[3] || '';
+        const modifier = parseInt(modifierStr) || 0;
 
+        let totalRoll = 0;
+        let rollDetails = [];
 
-                    let total = 0;
-                    let rolls = [];
+        // Perform the rolls
+        for (let i = 0; i < diceCount; i++) {
+            // Roll is inclusive: Math.floor(Math.random() * max) + 1
+            const roll = Math.floor(Math.random() * sides) + 1;
+            totalRoll += roll;
+            rollDetails.push(roll);
+        }
 
-                    for (let i = 0; i < numDice; i++) {
-                        const roll = Math.floor(Math.random() * dieSize) + 1;
-                        total += roll;
-                        rolls.push(roll);
-                    }
+        // Calculate final result
+        const finalResult = totalRoll + modifier;
 
-                    const rollTotal = total;
-                    total += modifier;
+        // Construct a descriptive formula string
+        let formula = notation + " = ";
+        if (rollDetails.length > 1) {
+            formula += "(" + rollDetails.join(' + ') + ")";
+        } else if (rollDetails.length === 1) {
+            formula += rollDetails[0];
+        }
 
-                    const modStr = modifier !== 0 ? (modifier > 0 ? ` + ${modifier}` : ` - ${Math.abs(modifier)}`) : '';
-                    const details = `[${rolls.join(' + ')}]${modStr} = ${total}`;
-                    return { formula: formula, result: total, details };
+        if (modifier !== 0) {
+            formula += (modifier > 0 ? " + " : " - ") + Math.abs(modifier);
+        }
+        formula += " = " + finalResult;
 
-                } else if (match = formula.match(/([+-]\d+)/)) {
-                    // Case 2: Modifier only (+N or -N). Default to 1d20.
-                    const modifier = parseInt(match[1]);
-                    const dieSize = 20;
-                    const roll = Math.floor(Math.random() * dieSize) + 1;
-                    const total = roll + modifier;
+        return { formula, result: finalResult };
+    }
 
-                    const modStr = modifier > 0 ? ` + ${modifier}` : ` - ${Math.abs(modifier)}`;
-                    const details = `1d20 (${roll}) ${modStr} = ${total}`;
-                    return { formula: formula, result: total, details: `(1d20) ${details}` };
+    /**
+     * Displays a transient toast notification with the roll result.
+     * @param {string} notation - The original dice notation.
+     * @param {string} formula - The detailed formula string.
+     * @param {number} result - The final numerical result.
+     */
+    function showToast(notation, formula, result) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'toast-message bg-white text-gray-800 border-l-4 border-primary';
 
-                }
+        toast.innerHTML = `
+            <p class="font-bold text-lg mb-1">${notation} Roll</p>
+            <p class="text-2xl font-extrabold text-primary mb-1">${result}</p>
+            <p class="text-sm text-gray-600">${formula}</p>
+        `;
 
-                return { formula, result: 'Error', details: 'Invalid formula' };
-            }
+        // Add to container
+        container.appendChild(toast);
 
-            /**
-             * Creates and displays a transient toast message.
-             * @param {string} formula - The original formula clicked.
-             * @param {string} result - The final calculated result.
-             * @param {string} details - Detailed breakdown of the roll.
-             */
-            function showToast(formula, result, details) {
-                // 1. Create the toast element
-                const toast = document.createElement('div');
-                toast.className = 'toast-message bg-white dark:bg-gray-700 p-3 rounded-lg shadow-2xl border-2 border-indigo-500 w-64 text-center';
-                
-                let toastContent;
+        // Wait a moment for the reflow before starting the transition
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 10);
 
-                if (result === 'Error') {
-                    toastContent = `
-                        <p class="text-sm font-bold text-red-500">Error</p>
-                        <p class="text-xs text-red-400">${details}</p>
-                    `;
-                } else {
-                    toastContent = `
-                        <p class="text-sm font-semibold text-gray-900 dark:text-gray-50">${formula}</p>
-                        <p class="text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 leading-none">${result}</p>
-                        <p class="text-xs text-gray-500 dark:text-gray-400 font-mono mt-1 whitespace-pre-wrap">${details.replace('=', 'Total:')}</p>
-                    `;
-                }
+        // Auto-hide after 5 seconds
+        const duration = 5000;
+        setTimeout(() => {
+            toast.classList.remove('show');
+            // Remove from DOM after transition finishes (0.5s)
+            setTimeout(() => {
+                container.removeChild(toast);
+            }, 500);
+        }, duration);
+    }
 
-                toast.innerHTML = toastContent;
-                toastContainer.appendChild(toast);
+    // --- DOM Manipulation and Setup ---
 
-                // 2. Show the toast with a slight delay for transition
-                setTimeout(() => {
-                    toast.classList.add('show');
-                }, 10);
+    /**
+     * Attaches the click listener to all .dice-roller elements.
+     */
+    function initEventListeners() {
+        document.querySelectorAll('.dice-roller').forEach(span => {
+            span.addEventListener('click', (event) => {
+                // Prevent click from propagating up to parent elements
+                event.stopPropagation();
 
-                // 3. Hide and remove after duration
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                    // Remove after transition finishes
-                    setTimeout(() => {
-                        toast.remove();
-                    }, 300); 
-                }, TOAST_DURATION_MS);
-            }
+                const notation = span.textContent.trim();
+                const roll = rollDice(notation);
 
-            /**
-             * Safely finds dice notation in text nodes and wraps them in spans.
-             * Uses TreeWalker to traverse only text nodes, avoiding disruption of HTML structure.
-             * @param {Node} node - The starting DOM node to scan (usually document.body).
-             */
-            function findAndWrapDiceNotations(node) {
-                // Regex: Captures XdY[+|-Z] OR [+][-Z]. Uses word boundaries for safety.
-                const diceRegex = /(\b\d*[dD]\d+([+-]\s*\d+)?\b|\b[+-]\s*\d+\b)/g;
-
-                const walker = document.createTreeWalker(
-                    node,
-                    NodeFilter.SHOW_TEXT,
-                    // Filter out nodes that are within script, style, or already processed elements
-                    { acceptNode: (node) => {
-                        const parent = node.parentElement;
-                        if (!parent || parent.closest('.dice-roller') || parent.tagName === 'SCRIPT' || parent.tagName === 'STYLE') {
-                            return NodeFilter.FILTER_SKIP;
-                        }
-                        return NodeFilter.FILTER_ACCEPT;
-                    }},
-                    false
-                );
-
-                let currentNode;
-
-                // Iterate through all text nodes
-                while (currentNode = walker.nextNode()) {
-                    const text = currentNode.nodeValue;
-                    if (diceRegex.test(text)) {
-                        // Reset regex for replacement function
-                        diceRegex.lastIndex = 0;
-
-                        // Use string.replace with a function to insert the HTML span
-                        const newContent = text.replace(diceRegex, (match) => {
-                            // Match is trimmed and stored in a data attribute
-                            const formula = match.trim().replace(/\s/g, '');
-                            return `<span 
-                                class="dice-roller font-mono font-bold text-indigo-700 bg-indigo-100 dark:text-indigo-300 dark:bg-indigo-900 px-1 py-0.5 rounded-md cursor-pointer transition duration-150 ease-in-out hover:bg-indigo-300 dark:hover:bg-indigo-700 active:ring-2 active:ring-indigo-500 active:scale-95" 
-                                data-formula="${formula}"
-                            >${match}</span>`;
-                        });
-
-                        // Create a temporary container to hold the HTML structure
-                        const tempDiv = document.createElement('div');
-                        tempDiv.innerHTML = newContent;
-
-                        // Replace the original text node with the new content
-                        while (tempDiv.firstChild) {
-                            currentNode.parentNode.insertBefore(tempDiv.firstChild, currentNode);
-                        }
-
-                        // Remove the original text node
-                        currentNode.parentNode.removeChild(currentNode);
-                    }
-                }
-            }
-
-            // 4. Run the scanner on the main content area
-            findAndWrapDiceNotations(document.getElementById('content'));
-
-            // 5. Set up the global click listener using event delegation
-            document.body.addEventListener('click', (event) => {
-                const target = event.target;
-                if (target.classList.contains('dice-roller')) {
-                    const formula = target.dataset.formula;
-                    if (formula) {
-                        const result = rollDice(formula);
-                        showToast(result.formula, result.result, result.details);
-                    }
-                }
+                showToast(notation, roll.formula, roll.result);
             });
         });
+    }
+
+    /**
+     * Traverses the body and wraps all found dice notations in a clickable span.
+     */
+    function wrapDiceNotation() {
+        // Use a TreeWalker to efficiently find all non-empty text nodes
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            // Filter function to skip script and style tags, and already wrapped text
+            { acceptNode: (node) => {
+                const parentTag = node.parentNode.tagName;
+                if (parentTag === 'SCRIPT' || parentTag === 'STYLE' || node.parentNode.classList.contains('dice-roller')) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                // Only accept non-empty text nodes that contain dice notation
+                if (node.nodeValue.trim() !== '' && diceRegex.test(node.nodeValue)) {
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+                return NodeFilter.FILTER_REJECT;
+            }},
+            false
+        );
+
+        const textNodesToReplace = [];
+        let currentNode;
+        while (currentNode = walker.nextNode()) {
+            textNodesToReplace.push(currentNode);
+        }
+
+        textNodesToReplace.forEach(textNode => {
+            const originalText = textNode.nodeValue;
+
+            // Use replace to find and wrap the dice notation
+            const newHtml = originalText.replace(diceRegex, (match) => {
+                // We replace the matched text with a span wrapper
+                return `<span class="dice-roller">${match}</span>`;
+            });
+
+            // Create a temporary container element to hold the new DOM structure
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = newHtml;
+
+            // Replace the original text node with the content of the temporary container
+            textNode.parentNode.insertBefore(tempDiv, textNode);
+
+            // Move all children of the tempDiv (the text and spans) into the parent
+            while (tempDiv.firstChild) {
+                textNode.parentNode.insertBefore(tempDiv.firstChild, tempDiv);
+            }
+
+            // Remove the temporary container and the original text node
+            textNode.parentNode.removeChild(tempDiv);
+            textNode.parentNode.removeChild(textNode);
+        });
+    }
+
+    // --- Initialization ---
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Wrap the notation in spans
+        wrapDiceNotation();
+        // 2. Attach click handlers to the new spans
+        initEventListeners();
+    });
+})();
