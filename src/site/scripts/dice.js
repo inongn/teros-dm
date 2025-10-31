@@ -1,5 +1,3 @@
-<script>
-        // Use a self-executing function to keep variables local
         (function() {
             // Define the regular expression to find dice notation: (N)d(S)(+\/-(M))
             // Group 1: (\d*) -> Dice Count (N, optional, e.g., '3' in '3d6')
@@ -179,4 +177,3 @@
                 initEventListeners();
             });
         })();
-    </script>
