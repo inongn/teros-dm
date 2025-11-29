@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
 
   // Regex matches: 1d8, d20, 4d4+4, 2d10-1, +4, -2, etc.
 const diceRegex = /(?<![\w])(?:[+-]?\d*d\d+(?:[+-]\d+)?|[+-]\d+)(?![\w])/g;
