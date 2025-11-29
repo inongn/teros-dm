@@ -1,12 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const bodyHTML = document.body.innerHTML;
 
   // Regex matches: 1d8, d20, 4d4+4, 2d10-1, +4, -2, etc.
 const diceRegex = /(?<![\w])(?:[+-]?\d*d\d+(?:[+-]\d+)?|[+-]\d+)(?![\w])/g;
+function wrapDiceNodes(node) {
+  if (node.nodeType === Node.TEXT_NODE) {
+    const text = node.textContent;
+    if (!diceRegex.test(text)) return;
 
-  document.body.innerHTML = bodyHTML.replace(diceRegex, match => {
-    return `<span class="dice-roller" data-dice="${match}">${match}</span>`;
-  });
+    const frag = document.createDocumentFragment();
+    let lastIndex = 0;
+
+    text.replace(diceRegex, (match, offset) => {
+      if (offset > lastIndex) {
+        frag.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
+      }
+
+      const span = document.createElement("span");
+      span.className = "dice-roller";
+      span.dataset.dice = match;
+      span.textContent = match;
+      frag.appendChild(span);
+
+      lastIndex = offset + match.length;
+    });
+
+    if (lastIndex < text.length) {
+      frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+    }
+
+    node.replaceWith(frag);
+    return;
+  }
+
+  node.childNodes.forEach(wrapDiceNodes);
+}
+
+// Run on the whole body
+wrapDiceNodes(document.body);
+
 
   function parseDice(notation) {
     // If it's just +4 or -2
