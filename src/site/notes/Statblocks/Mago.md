@@ -2,17 +2,7 @@
 {"dg-publish-dm":true,"permalink":"/statblocks/mago/","dgShowInlineTitle":"false"}
 ---
 
-<p><span><span style="display:none"> AC:<span id="ac"><strong>13</strong></span> | HP: <span id="hp">38</span> | IN: <span id="in">2</span></span></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">FUE <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+-1" aria-label="d20+-1
-[17]+-1"><span class="dice-roller-result">16</span></span> DES <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+2" aria-label="d20+2
-[19]+2"><span class="dice-roller-result">21</span></span> CON <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+1" aria-label="d20+1
-[11]+1"><span class="dice-roller-result">12</span></span> INT <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+3" aria-label="d20+3
-[15]+3"><span class="dice-roller-result">18</span></span> SAB <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+1" aria-label="d20+1
-[16]+1"><span class="dice-roller-result">17</span></span> CAR <span class="dice-roller no-icon is-max" aria-label-position="top" data-dice="d20+0" aria-label="d20+0
-[20]+0"><span class="dice-roller-result">20</span></span></div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="danger" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Acciones</div></div><div class="callout-content">
-<p dir="auto"><strong>Explosión.</strong> Tirada: <span class="dice-roller no-icon" aria-label-position="top" data-dice="d20+5" aria-label="d20+5
-[3]+5"><span class="dice-roller-result">8</span></span>; Impacto: <span class="dice-roller no-icon" aria-label-position="top" data-dice="2d10+3" aria-label="2d10+3
-[7, 1]+3"><span class="dice-roller-result">11</span></span>.<br>
-<strong>Bola de Fuego.</strong> Recarga 6 (<span class="dice-roller no-icon is-min" aria-label-position="top" data-dice="d6" aria-label="d6
-[1]"><span class="dice-roller-result">1</span></span>). CD 14 salvación de Destreza; <span class="dice-roller no-icon" aria-label-position="top" data-dice="8d6" aria-label="8d6
-[1, 1, 4, 1, 3, 6, 3, 6]"><span class="dice-roller-result">25</span></span> o la mitad.</p>
+<p><span><span style="display:none"> AC:<span id="ac"><strong>13</strong></span> | HP: <span id="hp">38</span> | IN: <span id="in">2</span></span></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">FUE: -1 | DES: +2 | CON: +1 | INT: +3 | SAB: +1 | CAR: +0</div></div></div></span></p><p><span><div data-callout-metadata="" data-callout-fold="" data-callout="danger" class="callout node-insert-event"><div class="callout-title" dir="auto"><div class="callout-icon"><svg width="16" height="16"></svg></div><div class="callout-title-inner">Acciones</div></div><div class="callout-content">
+<p dir="auto"><strong>Explosión.</strong> Tirada: d20+5; Impacto: 2d10+3.<br>
+<strong>Bola de Fuego.</strong> Recarga 6 (d6). CD 14 salvación de Destreza; 8d6 o la mitad.</p>
 </div></div></span></p>
