@@ -1,4 +1,4 @@
-document.addEventListener("load", () => {
+window.addEventListener("load", () => {
   const bodyHTML = document.body.innerHTML;
 
   // Regex matches: 1d8, d20, 4d4+4, 2d10-1, +4, -2, etc.
